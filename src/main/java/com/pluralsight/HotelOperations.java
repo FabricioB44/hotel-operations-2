@@ -12,5 +12,16 @@ public class HotelOperations {
         System.out.println("Employee regular hours: " + testEmployee.getRegularHours());
         System.out.println("Employee overtime hours: " + testEmployee.getOvertimeHours());
         System.out.println("Employee total paycheck: " + testEmployee.getTotalPay());
+
+        testRoom.checkIn();
+        System.out.println("Is room Occupied " + testRoom.getIsOccupied());
+        System.out.println("Is room dirty? " + testRoom.getIsDirty());
+        testRoom.checkOut();
+        System.out.println("Is room Occupied " + testRoom.getIsOccupied());
+        testRoom.cleanRoom();
+        System.out.println("Is room dirty? " + testRoom.getIsDirty());
+
+        testEmployee.punchTimeCard(8.45 , 16.30);
+        System.out.println("Employee total hours worked: " + testEmployee.getHoursWorked());
     }
 }

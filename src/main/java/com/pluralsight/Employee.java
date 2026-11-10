@@ -71,4 +71,10 @@ public class Employee {
         return totalPay;
     }
 
+    public void punchTimeCard(double timeIn, double timeOut) {
+        hoursWorked = Math.abs(timeOut - timeIn);
+        hoursWorked = Math.round(hoursWorked * 100.0) / 100.0;
+    }
+
+
 }
