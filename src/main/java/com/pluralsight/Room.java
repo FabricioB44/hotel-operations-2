@@ -57,6 +57,10 @@ public class Room {
     }
 
     public void cleanRoom() {
-        isDirty = false;
+        if (!isOccupied) {
+            isDirty = false;
+        } else {
+            System.out.println("Cannot clean an occupied room.");
+        }
     }
 }
